@@ -13,6 +13,7 @@ const Navbar = () => {
                 <li>CREATORS</li>
                 <li>STORES</li>
                 <li>GAME</li>
+                <li>RohanChange</li>
                 <li className='connect'>CONNECT</li>
                 </div>
             </ul>
@@ -21,5 +22,4 @@ const Navbar = () => {
         </div>
     )
 }
-
 export default Navbar
