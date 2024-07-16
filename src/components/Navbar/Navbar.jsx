@@ -13,6 +13,7 @@ const Navbar = () => {
                 <li>CREATORS</li>
                 <li>STORES</li>
                 <li>GAME</li>
+                <li>About</li>
                 <li className='connect'>CONNECT</li>
                 </div>
             </ul>
