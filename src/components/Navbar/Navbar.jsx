@@ -14,6 +14,7 @@ const Navbar = () => {
                 <li>STORES</li>
                 <li>GAME</li>
                 <li>RohanChange</li>
+                <li>About</li>
                 <li className='connect'>CONNECT</li>
                 </div>
             </ul>
