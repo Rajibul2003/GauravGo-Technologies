@@ -20,6 +20,10 @@ const Navbar = () => {
                 <li className="nav__item"><a href="#" className="nav__link">Advertiser</a></li>
                 <li className="nav__item"><a href="#" className="nav__link">Contact Us</a></li>
             </ul>
+            <div className="nav__search">
+                    <input type="text" placeholder="Search..." className="nav__search-input" />
+                </div>
+        
             <div className="nav__toggler" onClick={handleToggle}>
                 <div className="line1"></div>
                 <div className="line2"></div>

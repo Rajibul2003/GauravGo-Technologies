@@ -9,7 +9,6 @@ const App = () => {
       <div>
         <Home/>
       </div>
-      n
    </div>
   )
 }
