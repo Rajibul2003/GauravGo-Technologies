@@ -56,8 +56,11 @@ a:hover {
 }
 
 .nav__logo {
-    width: 5rem; /* Adjust size as needed */
+    width: 5rem; /* Ensure width is sufficient */
+    height: auto; /* Maintain aspect ratio */
+    /* Add other styles if needed */
 }
+
 
 .nav__menu {
     display: flex;
