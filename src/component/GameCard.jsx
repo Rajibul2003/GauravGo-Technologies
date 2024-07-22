@@ -2,14 +2,17 @@
 import React from 'react';
 import './GameCard.css';
 
-const GameCard = ({ image, name, description }) => {
+const GameCard = ({ image, name, description,playStoreUrl }) => {
     return (
         <div className="card">
             <img src={image} alt={name} className="card-image" />
             <div className="card-content">
                 <h2 className="card-title">{name}</h2>
                 <p className="card-description">{description}</p>
-                <button className="card-button">View More</button>
+                {/* //<button className="card-button">View More</button> */}
+                <a href={playStoreUrl} className="card-button" target="_blank" rel="noopener noreferrer">
+                    Play Now
+                </a>
             </div>
         </div>
     );
@@ -17,7 +20,7 @@ const GameCard = ({ image, name, description }) => {
 
 const GamesList = () => {
     const games = [
-        { image: 'src/assets/ArtfulArmor.png', name: 'ARTFUL ARMOR', description: '“Artful Armor,” a captivating puzzle game that challenges your artistic skills and problem-solving abilities. In this unique adventure, you must draw intricate line patterns to guide and protect your hero as they navigate through a series of challenging tasks.' },
+        { image: 'src/assets/ArtfulArmor.png', name: 'ARTFUL ARMOR', description: '“Artful Armor,” a captivating puzzle game that challenges your artistic skills and problem-solving abilities. In this unique adventure, you must draw intricate line patterns to guide and protect your hero as they navigate through a series of challenging tasks.',playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ezjoynetwork.bubblebirdRescue2' },
         { image: 'src/assets/Lost_in_the_world.png', name: 'Lost In The Wild', description: '“Lost in the Wild” an exhilarating 2D platformer adventure that will test your agility, wits, and bravery. As the daring explorer, you find yourself stranded in a lush, yet perilous jungle teeming with secrets and treasures waiting to be discovered.' },
         { image: 'src/assets/Ninja_Secret_Quest.png', name: 'NINJA’S SECRET QUEST', description: 'Ninja’s Secret Quest is a thrilling adventure game that challenges your ninja skills to the max! Navigate through tough levels filled with monstrous foes and tricky obstacles while racing against time to uncover the hidden key.' },
         { image: 'src/assets/Sena.png', name: 'SENA : Bharat’s Own Battle Royale (NEW)', description: 'Gauravgo Games Technologies is a startup on a mission to revolutionize the gaming industry in India. The company is currently developing India’s first battle royale game, SENA, which promises to be unlike any other game in the market.' },
@@ -32,7 +35,7 @@ const GamesList = () => {
             <h1 className="games-heading">Our Top Games</h1>
             <div className="cards-grid">
                 {games.map((game, index) => (
-                    <GameCard key={index} image={game.image} name={game.name} description={game.description} />
+                    <GameCard key={index} image={game.image} name={game.name} description={game.description} playStoreUrl={game.playStoreUrl} />
                 ))}
             </div>
         </div>
