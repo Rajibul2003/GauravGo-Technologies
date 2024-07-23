@@ -1,22 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 .hero {
   position: relative;
   text-align: center;
   color: #fff;
-  overflow: hidden; /* Ensure video and content don't overflow */
-  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  /* Ensure video and content don't overflow */
+  height: 100vh;
+  /* Full viewport height */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .fullscreen-video {
-  min-width: 100%; /* Ensure the video covers the entire hero section */
-  min-height: 100%; /* Ensure the video covers the entire hero section */
+  min-width: 100%;
+  /* Ensure the video covers the entire hero section */
+  min-height: 100%;
+  /* Ensure the video covers the entire hero section */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the video */
-  z-index: -1; /* Send the video to the background */
+  transform: translate(-50%, -50%);
+  /* Center the video */
+  z-index: -1;
+  /* Send the video to the background */
 }
 
 .hero__overlay {
@@ -28,12 +36,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent overlay */
 }
 
 .hero__content {
+  font-family: "Lato", sans-serif;
   text-align: center;
-  z-index: 1; /* Ensure content is above the video */
+  z-index: 1;
+  /* Ensure content is above the video */
 }
 
 /* Additional styles for your content */
@@ -67,3 +78,42 @@
   background-color: #0d0606;
 }
 
+@media only screen and (max-width: 600px) {
+  h5 {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h5 {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}

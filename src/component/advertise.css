@@ -1,0 +1,24 @@
+.advertise-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+      }
+      
+      .advertise-heading {
+        font-size: 3em;
+        margin-bottom: 20px;
+        text-decoration: underline;
+      }
+      
+      .advertise-image {
+        width: 100%;
+        height: auto;
+        max-width: 1200px; /* Adjust based on your design */
+        margin-left: 40px;
+      }
+      
+      
+      
+      

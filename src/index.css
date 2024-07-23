@@ -9,6 +9,10 @@ body {
         padding: 0;
         font-family: Arial, sans-serif; /* Optional: Set a default font */
     }
+html {
+        scroll-behavior: smooth;
+      }
+      
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

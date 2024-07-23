@@ -1,5 +1,6 @@
 /* src/components/GameCard.css */
 /* src/components/GameCard.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @keyframes crunchyEffect {
         0% {
           opacity: 0;
@@ -23,6 +24,7 @@
       }
       
       .games-heading {
+        font-family: "Open Sans", sans-serif;
         font-weight: bolder;
         font-size: 3em;
         margin-bottom: 20px;
