@@ -1,0 +1,62 @@
+/* Basic styling for the container */
+.founders {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fffafa; /* Gray background */
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333; /* Dark text for better readability */
+}
+
+/* Styling for the container holding the images and names */
+.founders__container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap; /* Makes the layout responsive */
+  max-width: 1200px; /* Ensures content is not too wide on large screens */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Styling for each founder item */
+.founders__item {
+  flex: 1 1 250px; /* Flexbox basis and wrapping */
+  max-width: 300px; /* Max width for the items */
+  text-align: center;
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 10px; /* Rounded corners */
+  padding: 1.5rem;
+  background-color: #fff; /* White background for each item */
+  box-shadow: 0 6px 12px rgba(46, 45, 45, 0.15); /* Deeper shadow for a lift effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.founders__item:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 12px 24px rgba(13, 13, 13, 0.2); /* Enhanced shadow on hover */
+}
+
+.founders__image {
+  width: 150px;
+  height: 150px; /* Fixed size for images */
+  object-fit: cover; /* Ensures images cover the circle */
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  border: 3px solid #8b8181; /*Optional: Border around image */
+}
+
+.founders__name {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #444; /* Darker color for name */
+}
+
+.founders__role {
+  font-size: 1.5rem;
+  color: #000000; /* Lighter color for role */
+}

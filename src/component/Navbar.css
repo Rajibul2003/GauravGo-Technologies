@@ -159,5 +159,7 @@ a:hover {
 
     .nav__search-input {
         width: 80%;
+        font-weight: 400;
+        color:blue;
     }
 }

@@ -29,16 +29,14 @@
         font-size: 3em;
         margin-bottom: 20px;
         color: #f9e6e6;
-        animation: crunchyEffect 2s ease-in-out;
+        animation: crunchyEffect 4s ease-in-out;
         text-decoration: underline;
-        
-
-      }
+        }
       
       .cards-grid {
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 35px;
         justify-content: center;
       }
       
@@ -63,6 +61,7 @@
       
       .card-content {
         padding: 15px;
+        ;
       }
       
       .card-title {
