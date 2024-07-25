@@ -5,10 +5,14 @@ import GameCard from './component/GameCard';
 import Advertisers from './component/advertise';
 import Footer1 from './component/Footer1.jsx';
 import Founders from './component/Founders.jsx';
+import LoadingBar from './component/LoadingBar.jsx';
 
 const App = () => {
   return (
     <div>
+      <div>
+        <LoadingBar/>
+      </div>
       <Navbar />
       <section id="home">
         <Home />

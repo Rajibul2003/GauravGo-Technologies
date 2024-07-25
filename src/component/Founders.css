@@ -2,61 +2,141 @@
 .founders {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #fffafa; /* Gray background */
+  background-color: #f8f9fa; /* Soft background color */
+  border-top: 12px solid #5b5151; /* Top border with blue color */
 }
 
+/* Heading Styling */
 .heading {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem; /* Increased font size for more prominence */
+  font-weight: 800; /* Bolder text for a stronger impact */
   margin-bottom: 2rem;
-  color: #333; /* Dark text for better readability */
+  color: #1a1a1a; /* Slightly lighter shade of dark gray */
+  text-align: center; /* Center-align the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background: linear-gradient(90deg, #bd8f55, #ff8045); /* Gradient background */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text color transparent */
+  padding: 1rem 0; /* Add some padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
-/* Styling for the container holding the images and names */
+.heading:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  background: linear-gradient(90deg, #efe8e5, #6d6250); /* Reverse gradient on hover */
+}
+
+/* Container holding the images and names */
 .founders__container {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  flex-wrap: wrap; /* Makes the layout responsive */
-  max-width: 1200px; /* Ensures content is not too wide on large screens */
-  margin: 0 auto; /* Centers the container */
+  flex-wrap: wrap; /* Responsive layout */
+  max-width: 1200px; /* Max width */
+  margin: 0 auto; /* Centering */
+  padding: 2rem 0;
 }
 
-/* Styling for each founder item */
+/* Founder item styling */
 .founders__item {
   flex: 1 1 250px; /* Flexbox basis and wrapping */
-  max-width: 300px; /* Max width for the items */
+  max-width: 300px; /* Max width */
   text-align: center;
-  border: 1px solid #ddd; /* Light border for separation */
+  border: 1px solid #ddd; /* Light border */
   border-radius: 10px; /* Rounded corners */
-  padding: 1.5rem;
-  background-color: #fff; /* White background for each item */
-  box-shadow: 0 6px 12px rgba(46, 45, 45, 0.15); /* Deeper shadow for a lift effect */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  padding: 2rem;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 6px 12px rgba(46, 45, 45, 0.15); /* Shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  overflow: hidden; /* Ensures content doesn't overflow */
 }
 
 .founders__item:hover {
   transform: translateY(-10px); /* Lift effect on hover */
-  box-shadow: 0 12px 24px rgba(13, 13, 13, 0.2); /* Enhanced shadow on hover */
+  box-shadow: 0 12px 24px rgba(13, 13, 13, 0.2); /* Enhanced shadow */
 }
 
+/* Founder image styling */
 .founders__image {
   width: 150px;
-  height: 150px; /* Fixed size for images */
-  object-fit: cover; /* Ensures images cover the circle */
+  height: 150px;
+  object-fit: cover; /* Cover the circle */
   border-radius: 50%;
   margin-bottom: 1.2rem;
-  border: 3px solid #8b8181; /*Optional: Border around image */
+  border: 4px solid #383b3e; /* Border around image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Image shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.founders__image:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Founder name styling */
 .founders__name {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #444; /* Darker color for name */
+  color: #444; /* Darker color */
 }
 
+/* Founder role styling */
 .founders__role {
   font-size: 1.5rem;
-  color: #000000; /* Lighter color for role */
+  color: #6c757d; /* Lighter color */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1200px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  .founders__item {
+    max-width: 280px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .heading {
+    font-size: 2rem;
+  }
+  .founders__item {
+    max-width: 250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+  .founders__item {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .founders__image {
+    width: 120px;
+    height: 120px;
+  }
+  .founders__name {
+    font-size: 1.6rem;
+  }
+  .founders__role {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .founders__name {
+    font-size: 1.4rem;
+  }
+  .founders__role {
+    font-size:1rem;
+  }
 }

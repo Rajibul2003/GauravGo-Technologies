@@ -13,7 +13,7 @@ const Founders = () => {
         </div>
         <div className='founders__item'>
           <img src="src/assets/Sriman.png" alt="Co-Founder" className='founders__image' />
-          <p className='founders__name'>Sriman Bhashkar</p>
+          <p className='founders__name'>Sriman Rabisankar Dash</p>
           <p className='founders__role'>(Co-Founder)</p>
         </div>
       </div>

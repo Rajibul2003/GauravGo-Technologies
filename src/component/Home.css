@@ -5,26 +5,22 @@
   text-align: center;
   color: #fff;
   overflow: hidden;
-  /* Ensure video and content don't overflow */
   height: 100vh;
-  /* Full viewport height */
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('../assets/background.jpg') no-repeat center center/cover;
 }
 
 .fullscreen-video {
   min-width: 100%;
-  /* Ensure the video covers the entire hero section */
   min-height: 100%;
-  /* Ensure the video covers the entire hero section */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Center the video */
   z-index: -1;
-  /* Send the video to the background */
 }
 
 .hero__overlay {
@@ -37,83 +33,125 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Semi-transparent overlay */
 }
 
 .hero__content {
   font-family: "Lato", sans-serif;
-  text-align: center;
   z-index: 1;
-  /* Ensure content is above the video */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Additional styles for your content */
-.hero__content h5 {
+.hero__subtitle {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
-.hero__content h1 {
-  font-size: 5rem;
+.hero__title {
+  font-size: 4rem;
   margin-bottom: 1rem;
+  font-weight: 900;
+  color: #FFD700;
+  animation: slideIn 1.5s ease-out forwards;
 }
 
-.hero__content p {
-  font-size: 2rem;
+.hero__description {
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  animation: fadeIn 2s ease-out forwards;
 }
 
 .btn {
   display: inline-block;
-  background-color: #2a2b2c;
+  background: linear-gradient(45deg, #ff6b6b, #f94d6f);
   color: #fff;
   padding: 0.8rem 2rem;
   text-decoration: none;
   font-size: 1.7rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-  background-color: #0d0606;
+  background: linear-gradient(45deg, #f94d6f, #ff6b6b);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (max-width: 600px) {
-  h5 {
-    font-size: 1em;
-  }
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-  h1 {
-    font-size: 1.5em;
-  }
 
-  p {
-    font-size: 0.9em;
-    margin-bottom: 15px;
+@media only screen and (max-width: 1200px) {
+  .hero__title {
+    font-size: 3.5rem;
   }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 0.9em;
+  .hero__description {
+    font-size: 1.25rem;
   }
 }
 
-@media only screen and (max-width: 600px) {
-  h5 {
-    font-size: 1em;
+@media only screen and (max-width: 900px) {
+  .hero__title {
+    font-size: 3rem;
   }
-
-  h1 {
-    font-size: 1.5em;
+  .hero__description {
+    font-size: 1rem;
   }
-
-  p {
-    font-size: 0.9em;
-    margin-bottom: 15px;
-  }
-
   .btn {
-    padding: 8px 16px;
-    font-size: 0.9em;
+    padding: 0.7rem 1.8rem;
+    font-size: 1.5rem;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hero__title {
+    font-size: 1.5rem;
+  }
+  .hero__description {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
 }

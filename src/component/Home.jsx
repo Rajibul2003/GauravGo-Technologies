@@ -22,9 +22,9 @@ const Home = () => {
 
       <div className="hero__overlay">
         <div className="hero__content">
-          <h5>Welcome..</h5>
-          <h1>Welcome To GauravGo Games Technologies</h1>
-          <p>We are connecting gaming, entertainment, buisness & communication all at one place</p>
+          <h5 className="hero__subtitle">Welcome..</h5>
+          <h1 className="hero__title">Welcome To GauravGo Games Technologies</h1>
+          <p className="hero__description">We are connecting gaming, entertainment, business & communication all at one place.</p>
           <a href="#services" className="btn" onClick={handlePlay}>Play now</a>
         </div>
       </div>

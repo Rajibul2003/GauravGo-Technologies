@@ -1,96 +1,109 @@
-/* src/components/GameCard.css */
-/* src/components/GameCard.css */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @keyframes crunchyEffect {
-        0% {
-          opacity: 0;
-          transform: scale(0.8) translateY(-20px);
-          color: #ffffff; /* Start color (red) */
-        }
-        50% {
-          opacity: 1;
-          transform: scale(1.1) translateY(10px);
-          color: #3b6e6e; /* Middle color (green) */
-        }
-        100% {
-          opacity: 1;
-          transform: scale(1) translateY(0);
-          color: #2d2d2d; /* End color (blue) */
-        }
-      }
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+    color: #ffffff; /* Start color */
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) translateY(10px);
+    color: #3b6e6e; /* Middle color */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    color: #2d2d2d; /* End color */
+  }
+}
+
 .games-container {
-        padding: 20px;
-        text-align: center;
-      }
-      
-      .games-heading {
-        font-family: "Open Sans", sans-serif;
-        font-weight: bolder;
-        font-size: 3em;
-        margin-bottom: 20px;
-        color: #f9e6e6;
-        animation: crunchyEffect 4s ease-in-out;
-        text-decoration: underline;
-        }
-      
-      .cards-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 35px;
-        justify-content: center;
-      }
-      
-      .card {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(244, 234, 234, 0.1);
-        width: 300px;
-        overflow: hidden;
-        transition: transform 0.2s;
-      }
-      
-      .card:hover {
-        transform: scale(1.05);
-      }
-      
-      .card-image {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-      
-      .card-content {
-        padding: 15px;
-        ;
-      }
-      
-      .card-title {
-        font-size: 1.5em;
-        margin: 10px 0;
-        color: #333;
-      }
-      
-      .card-description {
-        font-size: 1em;
-        color: #666;
-        margin-bottom: 15px;
-      }
-      
-      .card-button {
-        background-color: #007bff; /* Blue background */
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1em;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-bottom: 3px; /* Space below the button */
-      }
-      
-      .card-button:hover {
-        background-color: #0056b3;
+  padding: 20px;
+  text-align: center;
+  background: #121212; /* Dark background */
+}
+
+.games-heading {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #f9e6e6;
+  animation: crunchyEffect 4s ease-in-out;
+  text-decoration: underline;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.card:hover .card-title {
+  color: #007bff; /* Change title color on hover */
+}
+
+.card-description {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
+  transition: color 0.2s;
+}
+
+.card:hover .card-description {
+  color: #333; /* Change description color on hover */
+}
+
+.card-button {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 3px; /* Space below the button */
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
