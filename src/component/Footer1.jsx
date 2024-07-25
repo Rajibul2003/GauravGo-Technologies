@@ -30,7 +30,7 @@ const Footer = () => {
             </p>
             <div className="flex mt-4 space-x-4">
               {[
-                { href: "", icon: <FaFacebookF /> },
+                { href: "#", icon: <FaFacebookF /> },
                 { href: "#", icon: <FaTwitter /> },
                 { href: "#", icon: <FaLinkedinIn /> },
                 { href: "#", icon: <FaWhatsapp /> },
